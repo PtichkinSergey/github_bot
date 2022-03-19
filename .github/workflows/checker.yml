@@ -36,4 +36,4 @@ jobs:
 
     - id: check-pr
       name: Check PR
-      run: docker run -v ${PR_BOT_CONFIG_PATH}:/config rkolovanov/pr-automation:latest python3.8 pr.py "${{ github.token }}" ${{ steps.find-pr.outputs.pr }} ${{ github.event.repository.full_name }} ${{ github.event.sender.login }}
+      run: docker run -v ${PR_BOT_CONFIG_PATH}:/config ektomorf/pr1-automation:latest python3.8 pr.py "${{ github.token }}" ${{ steps.find-pr.outputs.pr }} ${{ github.event.repository.full_name }} ${{ github.event.sender.login }}
